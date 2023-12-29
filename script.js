@@ -5,8 +5,11 @@ const parseCode = (str) => {
 		firstName: "",
 		lastName:"",
 		id: ""
+	}
 	for(let key in obj){
-		obj[key] = words.shift();
+		if(words.length>0){
+			obj[key] = words.shift();
+		}
 	}
 	return obj;
 };
